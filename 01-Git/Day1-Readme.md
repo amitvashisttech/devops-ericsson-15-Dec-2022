@@ -152,3 +152,78 @@
   592  git branch -d production
   593  git log --oneline --graph
   ```
+
+
+# Demo 3 
+
+```
+
+  505  git clone https://github.com/amitvashisttech/devops-ericsson-15-Dec-2022.git
+  506  ls
+  507  cd devops-ericsson-15-Dec-2022/
+  508  ls
+  509  cat Day1-History.md 
+  510  git config --list 
+  511  cd ..
+  512  ks
+  513  ls
+  514  cd my-local-git-repo/
+  515  ls
+  516  git config --list 
+  517  ls
+  518  git remote add origin https://github.com/amitvashisttech/devops-test-repo-manual.git
+  519  git branch 
+  520  git push -u origin master
+  521  ls
+  522  cd /tmp/
+  523  ls
+  524  git clone https://github.com/amitvashisttech/devops-test-repo-manual.git
+  525  ls
+  526  cd devops-test-repo-manual/
+  527  ls
+  528  git logs 
+  529  cd 
+  530  ls
+  531  cd devops-ericsson-15-Dec-2022/
+  532  ls
+  533  history 
+  534  ls
+  535  mkdir 01-Git
+  536  mv Day1-History.md 01-Git/
+  537  ls
+  538  git add . 
+  539  git commit -m "01-Git Folder is added" 
+  540  git status 
+  541  git logs --oneline 
+  542  ls
+  543  git push 
+  544  git logs --oneline 
+  545  ls
+  546  vim README.md 
+  547  git commit -m "README Updated with Git" 
+  548  git add . ; git commit -m "README Updated with Git" 
+  549  ls
+  550  git logs --oneline 
+  551  git push 
+  552  git pull 
+  553  ls
+  554  git status 
+  555  git add . ; git commit -m "Test Merge" ; git push 
+  556  git pull 
+  557  git config pull.rebase false
+  558  ls
+  559  git config pull.rebase false
+  560  git add . ; git commit -m "Test Merge" ; git push 
+  561  git fetch 
+  562  git logs 
+  563  ls
+  564  git pull 
+  565  git status 
+  566  ls -ltr 01-Git/
+  567  git add . ; git commit -m "Test Merge" ; git push 
+  568  git log --online
+  569  git logs --online
+  570  git logs --oneline
+  571  ls -ltr 01-Git/
+
+```
