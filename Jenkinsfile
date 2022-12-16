@@ -47,6 +47,15 @@ pipeline {
                 sh 'mvn package -f 03-App-Code/my-app/pom.xml '
             }
         }
+
+
+        stage('Testing Pool SCM') {
+            steps {
+                echo 'Hello - Pool SCM'
+            }
+        }
+
+
     }
     
     
