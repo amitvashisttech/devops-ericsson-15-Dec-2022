@@ -20,6 +20,12 @@ az vm open-port --port 80 --resource-group jenkins-rg --name jenkinsVM
 
 # Deploying Jenkins
 
+
+### Let's login to newly create Jenkins Azure VM
+```
+ssh <username>@<public-ip>
+```
+
 ### First, add the repository key to the system:
 ```
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
