@@ -63,7 +63,7 @@ pipeline {
 
         stage('Docker Compose') {
             steps {
-                sh "cd ${project_dir}; sudo docker-compose up -d --build"
+                sh "cd ${project_dir}; docker-compose up -d --build"
             }
         }
 
