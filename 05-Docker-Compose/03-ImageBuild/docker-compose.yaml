@@ -1,0 +1,9 @@
+---
+
+version: '2'
+
+services:
+  myapache:
+    build: . 
+    ports:
+      - '30080:80'

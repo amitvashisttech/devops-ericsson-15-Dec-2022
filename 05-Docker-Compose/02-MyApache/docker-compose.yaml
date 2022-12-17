@@ -1,0 +1,13 @@
+---
+
+nginx: 
+  image: nginx:latest
+  ports:
+    - '8090:80'
+
+
+
+myapache: 
+  image: myapache:v3
+  ports:
+    - '8091:80'
