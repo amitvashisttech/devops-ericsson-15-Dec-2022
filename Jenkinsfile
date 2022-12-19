@@ -5,7 +5,8 @@ pipeline {
       repo_url = "https://github.com/amitvashisttech/devops-ericsson-15-Dec-2022.git"
       branch_name = "main"
       project_dir = "03-App-Code/mywebapp/"
-      server = Artifactory.server "01"
+      Artifactory-Server-ID = "01"
+      Artifactory-Repo = "mywebapp-repo"
 
     }
 
@@ -66,12 +67,12 @@ pipeline {
        stage('Build Management') { 
         steps {
            rtUpload (
-              serverId: "01",
+              serverId: "${Artifactory-Server-ID}",
               spec: """{ 
                  "files": [
                            {
                               "pattern": "${project_dir}/target/*.war",
-                              "target": "mywebapp-repo"
+                              "target": "${Artifactory-Repo}"
                            }
                          ]
                       }"""
@@ -82,7 +83,7 @@ pipeline {
         stage('Publish Build Info'){ 
           steps { 
                 rtPublishBuildInfo (
-                    serverId: "01"
+                    serverId: "${Artifactory-Server-ID}"
                 )
             }        
         }
