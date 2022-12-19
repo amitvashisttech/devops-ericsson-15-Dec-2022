@@ -1,0 +1,24 @@
+---
+
+- hosts: web
+  name: "Webserver Deployment - Play"
+  become: yes 
+  tasks:
+  - name: Install Apache Packages
+    apt: name=apache2 state=present
+
+  - name: Start Apache Service
+    service: name=apache2 state=started
+
+
+- hosts: "web:ansible"
+  name: "NTP Deployment - Play"
+  become: yes 
+  tasks:
+  - name: Install NTP Packages
+    apt: name=ntp state=present
+
+  - name: Start NTP Service
+    service: name=ntp state=started
+
+

@@ -38,3 +38,33 @@
   942  vim hosts
   943  ansible dc -i hosts -m command -a 'df -h'
 ```
+
+
+## Demo 2 & 3 
+
+```
+ 986  cd ../02-Ansible-Config/
+  987  ls
+  988  vim ansible.cfg
+  989  ls
+  990  ansible dc -m command -a 'df -h'
+  991  vim ansible.cfg
+  992  ansible dc -m command -a 'df -h'
+  993  ls
+  994  cd ..
+  995  ls
+  996  cp -rf 02-Ansible-Config 03-Playbook
+  997  ls
+  998  cd 03-Playbook/
+  999  ls
+ 1000  vim webserver.yaml
+ 1001  ls
+ 1002  ansible-playbook webserver.yaml
+ 1003  curl 10.0.0.6
+ 1004  curl 10.0.0.5
+ 1005  ls
+ 1006  vim webserver.yaml
+ 1007  ansible-playbook webserver.yaml
+ 1008  vim webserver.yaml
+ 1009  ansible-playbook webserver.yaml
+```
