@@ -5,7 +5,7 @@ pipeline {
       repo_url = "https://github.com/amitvashisttech/devops-ericsson-15-Dec-2022.git"
       branch_name = "main"
       project_dir = "03-App-Code/mywebapp/"
-      art-server = "01"
+      art-server = 01
       art-epo = "mywebapp-repo"
 
     }
