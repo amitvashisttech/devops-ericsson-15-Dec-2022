@@ -7,6 +7,7 @@ pipeline {
       project_dir = "03-App-Code/mywebapp/"
       server = Artifactory.server "01"
       buildInfo = Artifactory.newBuildInfo()
+      artifactory_repo = mywebapp-repo
 
     }
 
@@ -64,13 +65,13 @@ pipeline {
         }
 
 
-        stage('Build Management') { 
+       stage('Build Management') { 
         steps { 
          def uploadSpec = """{ 
             "files": [
                {
                 "pattern": "**/*.war",
-                "target": "${project_dir}"
+                "target": "${artifactory_repo}"
                }
              ]
          }"""
