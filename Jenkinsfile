@@ -71,7 +71,7 @@ pipeline {
                  "files": [
                            {
                               "pattern": "${project_dir}/target/*.war",
-                              "target": "${art-repo}"
+                              "target": "mywebapp-repo"
                            }
                          ]
                       }"""
