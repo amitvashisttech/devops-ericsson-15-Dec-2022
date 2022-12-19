@@ -66,24 +66,28 @@ pipeline {
 
 
        stage('Build Management') { 
-        steps { 
-         def uploadSpec = """{ 
-            "files": [
-               {
-                "pattern": "**/*.war",
-                "target": "${artifactory_repo}"
-               }
-             ]
-         }"""
-        server.upload spec: uploadSpec 
-       }
-     }
-
-    stage('Publish Build Info'){ 
-      steps { 
-        server.publishBuildInfo "${buildInfo}"
+        steps {
+           rtUpload (
+              serverId: "${server}",
+              spec: """{ 
+                 "files": [
+                           {
+                              "pattern": "**/*.war",
+                              "target": "${artifactory_repo}"
+                           }
+                         ]
+                      }"""
+                    )
+                }
         }
-      }
+
+        stage('Publish Build Info'){ 
+          steps { 
+                rtPublishBuildInfo (
+                    serverId: "${server}"
+                )
+            }        
+        }
 
 
 
