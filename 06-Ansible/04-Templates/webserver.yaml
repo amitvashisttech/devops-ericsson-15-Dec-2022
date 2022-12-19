@@ -10,6 +10,9 @@
   - name: Deploy Custom Web Page
     copy: src=files/index.html dest=/var/www/html/
 
+  - name: Deploy Custom Info Web Page
+    template: src=templates/info.j2 dest=/var/www/html/info.html
+
   - name: Start Apache Service
     service: name=apache2 state=started
 
