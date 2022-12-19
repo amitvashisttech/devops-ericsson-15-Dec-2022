@@ -72,7 +72,7 @@ pipeline {
               spec: """{ 
                  "files": [
                            {
-                              "pattern": "**/*.war",
+                              "pattern": "${project_dir}/target/*.war",
                               "target": "${artifactory_repo}"
                            }
                          ]
