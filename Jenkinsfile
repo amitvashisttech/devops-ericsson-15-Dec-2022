@@ -66,7 +66,7 @@ pipeline {
        stage('Build Management') { 
         steps {
            rtUpload (
-              serverId: "${server}",
+              serverId: "01",
               spec: """{ 
                  "files": [
                            {
@@ -82,7 +82,7 @@ pipeline {
         stage('Publish Build Info'){ 
           steps { 
                 rtPublishBuildInfo (
-                    serverId: "${server}"
+                    serverId: "01"
                 )
             }        
         }
