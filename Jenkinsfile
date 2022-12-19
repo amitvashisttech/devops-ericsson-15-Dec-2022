@@ -73,7 +73,7 @@ pipeline {
                  "files": [
                            {
                               "pattern": "${project_dir}/target/*.war",
-                              "target": "${artifactory_repo}"
+                              "target": "mywebapp-repo"
                            }
                          ]
                       }"""
