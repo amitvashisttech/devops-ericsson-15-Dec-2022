@@ -6,7 +6,6 @@ pipeline {
       branch_name = "main"
       project_dir = "03-App-Code/mywebapp/"
       server = Artifactory.server "01"
-      buildInfo = Artifactory.newBuildInfo()
       artifactory_repo = mywebapp-repo
 
     }
