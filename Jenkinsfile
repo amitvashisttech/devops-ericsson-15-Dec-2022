@@ -64,7 +64,8 @@ pipeline {
         }
 
 
-        stage('Build Management'){ 
+        stage('Build Management') { 
+        steps { 
          def uploadSpec = """{ 
             "files": [
                {
@@ -74,11 +75,14 @@ pipeline {
              ]
          }"""
         server.upload spec: uploadSpec 
-    }
+       }
+     }
 
     stage('Publish Build Info'){ 
+      steps { 
         server.publishBuildInfo "${buildInfo}"
-    }
+        }
+      }
 
 
 
