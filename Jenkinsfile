@@ -114,7 +114,7 @@ pipeline {
                  "files": [
                            {
                               "pattern": "mywebapp-repo/*.war",
-                              "target": "ansible-code/files/"
+                              "target": "03-App-Code/mywebapp/ansible-code/files/"
                            }
                          ]
                       }"""
@@ -125,7 +125,7 @@ pipeline {
 
         stage('Getting Ready For Ansible') {
             steps {
-                sh "echo \'<h1>JENKINS TASK BUILD ID: ${env.BUILD_DISPLAY_NAME}</h1>\' > ansible-code/files/jenkins.html"
+                sh "echo \'<h1>JENKINS TASK BUILD ID: ${env.BUILD_DISPLAY_NAME}</h1>\' > 03-App-Code/mywebapp/ansible-code/files/jenkins.html"
             }
         }
 
