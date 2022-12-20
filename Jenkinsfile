@@ -58,7 +58,7 @@ pipeline {
 
         stage('Sonar Qube') {
             steps {
-              withSonarQubeEnv('SonarQube') {
+              withSonarQubeEnv('Sonar') {
                 sh "mvn sonar:sonar -f ${project_dir}/pom.xml"
             }
         }
